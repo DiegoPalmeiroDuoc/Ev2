@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<link rel="stylesheet" type="text/css" href="registro.page.scss">
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <ion-input [(ngModel)]="confirmarContrasena" name="confirmarContrasena" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">RUT o DNI</ion-label>
+      <ion-input [(ngModel)]="rutDni" name="rutDni" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Regiones</ion-label>
+      <ion-select label="Regiones"  (ionChange)="resultadoRegion()" [(ngModel)]="regionSeleccionada">
+        <ion-select-option  *ngFor="let region of regiones" [value]="region.nombre">"{{region.nombre}}"</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <div class="register-button-container">
+    <button class="blood-drip-button" (click)="registrar()">Registrar</button>
+  </div>
+</ion-content>

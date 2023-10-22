@@ -1,0 +1,137 @@
+/* Estilos para el contenedor del formulario */
+ion-content {
+  background-color: #04d4db; /* Fondo inicial */
+  padding: 20px;
+}
+
+ion-item {
+  background-color: rgb(0, 255, 255); /* Cambio a verde */
+  border: 1px solid rgb(136, 0, 118); /* Cambio a verde */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  animation: backgroundChange 3s infinite, borderChange 3s infinite; /* Aplicar ambas animaciones */
+}
+
+/* Definir una animación que cambia los colores de fondo y borde */
+@keyframes backgroundChange {
+  0% {
+    background-color: #a70000; /* Fondo inicial al inicio de la animación */
+  }
+  100% {
+    background-color: rgb(130, 0, 134); /* Cambio a verde al final de la animación */
+  }
+}
+
+@keyframes borderChange {
+  0% {
+    border-color:#ffffff; /* Borde transparente al inicio de la animación */
+  }
+  25% {
+    border-color: rgb(0, 204, 255); /* Cambio a verde al final de la animación */
+  }
+  50% {
+    border-color: rgb(4, 224, 52); /* Cambio a verde al final de la animación */
+  }
+  75% {
+    border-color: rgb(152, 5, 172); /* Cambio a verde al final de la animación */
+  }
+  100% {
+    border-color: rgb(255, 255, 255); /* Cambio a verde al final de la animación */
+  }
+}
+
+/* Resto de tus estilos... */
+
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loginButton,
+.registerButton,
+.forgotPasswordButton {
+  margin-top: 10px;
+  position: relative; /* Agrega esta línea */
+}
+
+.loginButton::after,
+.registerButton::after,
+.forgotPasswordButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0); /* Color transparente inicial */
+  border-radius: 10px;
+  transform: scaleY(0); /* Inicialmente, está oculto */
+  transform-origin: top;
+  transition: transform 0.3s, background 0.3s;
+  pointer-events: none;
+}
+
+.loginButton:hover::after,
+.registerButton:hover::after,
+.forgotPasswordButton:hover::after {
+  background: rgba(255, 0, 0, 0.5); /* Cambia el color al hacer hover */
+  transform: scaleY(1); /* Muestra el efecto de goteo */
+}
+
+ion-input input {
+  transition: all 0.3s;
+}
+
+ion-input input:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bloodButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(128, 27, 223);
+  color: #ffffff;
+  font-weight: bold;
+  animation: bloodDrip 1s infinite alternate;
+}
+
+@keyframes bloodDrip {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(128, 27, 223, 0.8);
+  }
+  100% {
+    transform: translateY(5px);
+    box-shadow: 0 5px 15px rgba(128, 27, 223, 0.2);
+  }
+}

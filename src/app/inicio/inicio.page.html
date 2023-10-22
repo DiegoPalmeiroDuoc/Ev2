@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>Bienvenido, {{ nombreUsuario }}</ion-card-title>
+      <label for="">Tus datos son:</label>
+      <p>RUT o DNI: {{ rutDni }}</p>
+      <p>Región Seleccionada: {{ regionSeleccionada }}</p>
+      <p>Hora de Registro: {{ horaRegistro }}</p>
+    </ion-card-content>
+  </ion-card>
+  <button class="botonScan splash-button" expand="full" (click)="navigateToScanPage()">Escanear QR</button>
+</ion-content>

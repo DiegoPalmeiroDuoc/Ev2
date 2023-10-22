@@ -1,0 +1,14 @@
+
+
+<ion-content [fullscreen]="true">
+  
+
+  <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+
+  <p>
+    <small>Resultado del Scanner</small>
+    <strong> {{ scanResult }}</strong>
+  </p>
+
+
+</ion-content>

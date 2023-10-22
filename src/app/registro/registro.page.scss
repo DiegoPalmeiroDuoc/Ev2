@@ -1,0 +1,93 @@
+
+/* Estilos para el contenedor del formulario */
+ion-content {
+  background-color: #f5f5f5; /* Cambia el color de fondo según tus preferencias */
+  padding: 20px;
+}
+
+
+ion-item {
+  background-color: #ffffff;
+  border: 1px solid transparent; /* Borde inicial transparente */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  animation: borderChange 3s infinite; /* Aplicar animación a los bordes */
+}
+
+/* Definir una animación que cambia los colores de los bordes */
+@keyframes borderChange {
+  0% {
+    border-color: #007bff; /* Color de borde al inicio de la animación */
+  }
+  25% {
+    border-color: #e74c3c; /* Color de borde a los 25% de la animación */
+  }
+  50% {
+    border-color: #27ae60; /* Color de borde a los 50% de la animación */
+  }
+  75% {
+    border-color: #f39c12; /* Color de borde a los 75% de la animación */
+  }
+  100% {
+    border-color: #007bff; /* Color de borde al final de la animación */
+  }
+}
+
+
+/* Estilos para las etiquetas de los campos de entrada */
+ion-label {
+  font-weight: bold;
+  color: #333; /* Color del texto de la etiqueta */
+}
+
+/* Estilos para los botones */
+/* Estilo base para los botones */
+/* Estilo para el contenedor del botón de registro */
+.register-button-container {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Estilo para el botón de registro */
+ion-button {
+  --border-radius: 50px;
+  --background: #3d70a7;
+  --color: #ffffff;
+  font-weight: bold;
+  padding: 10px 20px; /* Ajusta el tamaño del botón según tus preferencias */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+
+
+/* Estilo para el título del formulario */
+ion-title {
+  font-size: 24px; /* Tamaño del título */
+  color: #333; /* Color del texto del título */
+  margin: 10px 0;
+}
+.blood-drip-button {
+  background-color: #ff0040; /* Color de fondo del botón */
+  color: #000000; /* Color del texto del botón */
+  font-weight: bold;
+  border: none;
+  padding: 23px; /* Ajusta el tamaño del botón según tus preferencias */
+  border-radius: 10px;
+  transition: all 0.3s;
+  animation: bloodDrip 1s infinite alternate; /* Aplica la animación de goteo */
+}
+
+@keyframes bloodDrip {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 50px rgba(0, 140, 255, 0.8);
+  }
+  100% {
+    transform: translateY(5px);
+    box-shadow: 0 5px 25px rgba(255, 251, 0, 0.2);
+  }
+}
